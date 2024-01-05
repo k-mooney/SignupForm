@@ -1,11 +1,109 @@
-body {
-  background-color: powderblue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  color: blue;
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-p {
-  color: red;
+.background-container {
+  display: flex;
+  border: 2px solid black;
+  width: 500px;
+  height: 900px;
+  position: relative;
+}
+
+.sidebar {
+  display: flex;
+  position: absolute;
+  top: 200px;
+  height: 180px;
+  width: 500px;
+  background: rgba(7,43,7,0.5);
+}
+
+.sidebar-icon {
+  display: flex;
+  flex: 1;
+  justify-content: end;
+}
+
+@font-face {
+  font-family: norse-bold;
+  src: url(fonts/Norse-Bold.otf);
+}
+
+.sidebar-text {
+  display: flex;
+  flex: 1;
+  color: white;
+  align-items: center;
+  font-family: norse-bold;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.photo-credit {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  bottom: 0px;
+  left: 120px;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid blue;
+  width: 700px;
+  height: 900px;
+}
+
+.header {
+  /*border: 5px solid green;*/
+  width: 700px;
+  height: 300px;
+  padding: 70px 20px;
+  background-color: #f4f4f4;
+
+  p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+  }
+
+}
+
+.form {
+  border: 5px solid yellow;
+  width: 700px;
+  height: 300px;
+}
+
+.fieldholder {
+  position: relative;
+  margin-bottom: 1.25em;
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  input, label {
+    font-size: 1em;
+    width: 50%;
+    height:  55px;
+  }
+}
+
+.footer {
+  border: 5px solid red;
+  width: 700px;
+  height: 300px;
 }
