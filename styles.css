@@ -60,7 +60,6 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
   width: 700px;
   height: 900px;
 }
@@ -80,30 +79,81 @@
 }
 
 .form {
-  border: 5px solid yellow;
+  /* border: 5px solid yellow; */
   width: 700px;
   height: 300px;
+
 }
 
-.fieldholder {
+.field-container {
+  display: flex;
+  margin: 0px 0px 0px 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+
+.fieldholder2 {
   position: relative;
   margin-bottom: 1.25em;
 
-  label {
-    position: absolute;
-    top: 0;
-    left: 0;
+  input {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    border: 2px solid lightgray;
+    padding: 5px;
   }
 
-  input, label {
-    font-size: 1em;
-    width: 50%;
-    height:  55px;
+  label {
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
   }
+
+  input:focus {
+    outline: 0;
+    border-color: blue;
+  }
+  
 }
 
 .footer {
-  border: 5px solid red;
+  /* border: 5px solid red; */
   width: 700px;
   height: 300px;
+}
+
+.create-account-button {
+  margin: 30px;
+  padding: 10px 50px;
+  color: white;
+  font-size: large;
+  background-color: rgb(20, 66, 20);
+  border-radius: 10px;
+}
+
+.already {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 0px 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+.link {
+  margin: 0px 0px 0px 5px;
 }

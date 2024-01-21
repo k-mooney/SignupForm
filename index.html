@@ -36,38 +36,83 @@
       </div>
 
       <div class="form">
-        <h1>Let's do this!</h1>
+        <h4 style="font-family:Verdana, Geneva, Tahoma, sans-serif;margin-left:20px;margin-bottom:25px">Let's do this!</h4>
         <form>
 
-          <div class="fieldholder">
-            <label for="firstname">FIRST NAME</label>
-            <input type="text" id="firstname">
+          <div class="field-container">
+            <div class="row">
+              <div class="column">
+                <div class="fieldholder2">
+                  <label for="firstname">FIRST NAME</label>
+                  <input type="text" id="firstname">
+                </div>
+   
+                <div class="fieldholder2">
+                  <label for="email">EMAIL</label>
+                  <input type="email" id="email">
+                 </div>
+    
+                 <div class="fieldholder2">
+                  <label for="password">PASSWORD</label>
+                  <input type="password" id="password" onkeyup="check();">
+                  <span id="message"></span>
+                 </div>
+       
+              </div>
+
+              <div class="column">
+  
+                <div class="fieldholder2">
+                  <label for="lastname">LAST NAME</label>
+                  <input type="text" id="lastname">
+                 </div>
+   
+                 <div class="fieldholder2">
+                  <label for="phonenumber">PHONE NUMBER</label>
+                 <input type="text" id="phonenumber">
+                 </div>
+                          
+                 <div class="fieldholder2">
+                  <label for="passwordconfirm">CONFIRM PASSWORD</label>
+                  <input type="password" id="passwordconfirm" onkeyup="check();">
+                 </div>
+                   
+              </div>
+            </div>
+            
           </div>
 
-          <div class="fieldholder">
-            <label for="lastname">LAST NAME</label>
-            <input type="text" id="lastname">
-           </div>
  
-           <div class="fieldholder">
-            <label for="email">EMAIL</label>
-            <input type="email" id="email">
-           </div>
-
-           <div class="fieldholder">
-            <label for="phonenumber">PHONE NUMBER</label>
-           <input type="text" id="phonenumber">
-           </div>
-
         </form>
+
+  
+        <script>
+          var check = function() {
+            console.log("check()");
+            if (document.getElementById("password").value !== document.getElementById("passwordconfirm").value) {
+              console.log("do not match");
+              document.getElementById('message').style.color = 'red';
+              document.getElementById('message').innerHTML = "*Passwords do not match";
+            } else {
+              console.log("match");
+              document.getElementById('message').innerHTML = "";
+            }
+          }
+
+        </script>
+      
      </div>
 
       <div class="footer">
-
+        <button class="create-account-button">Create Account</button>
+        <div class="already">
+          <p>Already have an account?</p>
+          <a class="link" href="url">Log in</a>
+        </div>
       </div>
     </div>
   
   </div>
-  
+
 </body>
 </html>
